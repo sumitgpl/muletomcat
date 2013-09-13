@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="org.mule.util.CaseInsensitiveHashMap" type="org.mule.util.CaseInsensitiveHashMapType"/>
+  <xs:complexType name="org.mule.util.CaseInsensitiveHashMapType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="xs:string" name="default"/>
+      <xs:element type="xs:float" name="float"/>
+      <xs:element name="int">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="16"/>
+            <xs:enumeration value="9"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="string"/>
+      <xs:element name="sql-timestamp">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="2013-08-17 21:44:37.0"/>
+            <xs:enumeration value="password"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="unserializable-parents"/>
+      <xs:element type="org.mule.util.CaseInsensitiveHashMapType" name="org.mule.util.CaseInsensitiveHashMap"/>
+    </xs:choice>
+    <xs:attribute type="xs:string" name="serialization" use="optional"/>
+  </xs:complexType>
+</xs:schema>
