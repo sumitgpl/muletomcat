@@ -54,8 +54,4 @@ http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/m
         </choice>
         <echo-component doc:name="Echo"/>
     </flow>
-    <flow name="crmreqrespFlow2" doc:name="crmreqrespFlow2">
-        <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="8081" doc:name="HTTP"/>
-        <flow-ref name="crmreqrespFlow1" doc:name="Flow Reference"/>
-    </flow>
 </mule>
