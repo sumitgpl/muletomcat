@@ -13,3 +13,8 @@
 127.2.220.129 - - [23/Sep/2013:06:14:11 -0400] "GET / HTTP/1.1" 200 11444
 127.2.220.129 - - [23/Sep/2013:06:14:11 -0400] "GET / HTTP/1.1" 200 11444
 127.2.220.129 - - [23/Sep/2013:06:14:20 -0400] "GET /crmreqresp/service?module=Account&username=abhi&passwd=abhi&name=test&account_type=test&industry=test&annual_revenue=100&billing_address_street=test&billing_address_city=dl&billing_address_state=DL&billing_address_postalcode=110014&billing_address_country=IN&shipping_address_street=test&shipping_address_city=dl&shipping_address_state=DL&shipping_address_postalcode=110014&shipping_address_country=IN HTTP/1.1" 200 59
+127.2.220.129 - - [23/Sep/2013:10:33:58 -0400] "GET /crmreqresp/service?module=Account&username=abhi&passwd=abhi&name=test&account_type=test&industry=test&annual_revenue=100&billing_address_street=test&billing_address_city=dl&billing_address_state=DL&billing_address_postalcode=110014&billing_address_country=IN&shipping_address_street=test&shipping_address_city=dl&shipping_address_state=DL&shipping_address_postalcode=110014&shipping_address_country=IN HTTP/1.1" 500 24274
+127.2.220.129 - - [23/Sep/2013:10:45:37 -0400] "GET /crmreqresp/service HTTP/1.1" 200 122
+127.2.220.129 - - [23/Sep/2013:10:45:38 -0400] "GET /favicon.ico HTTP/1.1" 200 21630
+127.2.220.129 - - [23/Sep/2013:10:46:25 -0400] "GET /bizgrassv14 HTTP/1.1" 404 973
+127.2.220.129 - - [23/Sep/2013:10:46:56 -0400] "GET /crmreqresp/service HTTP/1.1" 200 122
