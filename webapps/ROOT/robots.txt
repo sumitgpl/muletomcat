@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+User-agent: GoogleBot
+Allow: /
+
+Sitemap: http://www.bizgrass.com/sitemap.xml
