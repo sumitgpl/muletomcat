@@ -752,6 +752,7 @@ Sep 23, 2013 6:15:38 AM org.apache.coyote.AbstractProtocol destroy
 INFO: Destroying ProtocolHandler ["http-bio-127.2.220.129-8080"]
 Sep 23, 2013 6:15:38 AM org.apache.coyote.AbstractProtocol destroy
 INFO: Destroying ProtocolHandler ["ajp-bio-127.2.220.129-15009"]
+<<<<<<< HEAD
 Sep 23, 2013 10:24:25 AM org.apache.catalina.core.AprLifecycleListener init
 INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/i386:/lib:/usr/lib
 Sep 23, 2013 10:24:27 AM org.apache.coyote.AbstractProtocol init
@@ -806,3 +807,53 @@ Sep 23, 2013 10:57:15 AM org.apache.coyote.AbstractProtocol destroy
 INFO: Destroying ProtocolHandler ["http-bio-127.2.220.129-8080"]
 Sep 23, 2013 10:57:15 AM org.apache.coyote.AbstractProtocol destroy
 INFO: Destroying ProtocolHandler ["ajp-bio-127.2.220.129-15009"]
+=======
+23 Sep, 2013 8:54:36 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0_39\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Oracle\Middleware\Oracle_FRHome1\bin;C:\app\sumit\product\11.2.0\dbhome_1\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Diskeeper Corporation\ExpressCache\;C:\Oracle\Middleware\Oracle_FRHome1\opmn\bin;C:\Oracle\Middleware\Oracle_FRHome1\opmn\lib;C:\Oracle\Middleware\Oracle_FRHome1\perl\bin;C:\Program Files\Java\jre6;C:\Program Files\Java\jdk1.6.0_39;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Git\bin;C:\xampp\mysql\bin;c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Octave\3.2.4_gcc-4.4.0\bin;C:\Octave\swigwin-2.0.10;C:\Ruby193\bin;C:\Program Files (x86)\CVSNT\;.
+23 Sep, 2013 8:54:37 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-127.2.220.129-8080"]
+23 Sep, 2013 8:54:37 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-127.2.220.129-15009"]
+23 Sep, 2013 8:54:37 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1505 ms
+23 Sep, 2013 8:54:37 PM org.mule.module.tomcat.MuleTomcatListener doStart
+INFO: Starting Mule
+23 Sep, 2013 8:54:38 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+23 Sep, 2013 8:54:38 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.42
+23 Sep, 2013 8:54:39 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory F:\apache-tomcat-7.0.42\webapps\crmreqresp
+23 Sep, 2013 8:54:59 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory F:\apache-tomcat-7.0.42\webapps\docs
+23 Sep, 2013 8:55:10 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory F:\apache-tomcat-7.0.42\webapps\examples
+23 Sep, 2013 8:55:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory F:\apache-tomcat-7.0.42\webapps\host-manager
+23 Sep, 2013 8:55:28 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory F:\apache-tomcat-7.0.42\webapps\manager
+23 Sep, 2013 8:55:38 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory F:\apache-tomcat-7.0.42\webapps\ROOT
+23 Sep, 2013 8:55:47 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-127.2.220.129-8080"]
+23 Sep, 2013 8:55:47 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-127.2.220.129-15009"]
+23 Sep, 2013 8:55:47 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 70386 ms
+23 Sep, 2013 8:57:21 PM org.mule.module.tomcat.MuleTomcatListener doStop
+INFO: Stopping Mule
+23 Sep, 2013 8:57:22 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-127.2.220.129-8080"]
+23 Sep, 2013 8:57:22 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-127.2.220.129-15009"]
+23 Sep, 2013 8:57:22 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+23 Sep, 2013 8:57:22 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-127.2.220.129-8080"]
+23 Sep, 2013 8:57:22 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-127.2.220.129-15009"]
+23 Sep, 2013 8:57:22 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-127.2.220.129-8080"]
+23 Sep, 2013 8:57:22 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-127.2.220.129-15009"]
+>>>>>>> 31ae32e1bd0333a0647b79423b51972a8ca2ab0c
