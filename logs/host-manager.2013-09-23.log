@@ -15,3 +15,5 @@ INFO: No Spring WebApplicationInitializer types detected on classpath
 23 Sep, 2013 8:55:28 PM org.apache.catalina.core.ApplicationContext log
 INFO: No Spring WebApplicationInitializer types detected on classpath
 >>>>>>> 31ae32e1bd0333a0647b79423b51972a8ca2ab0c
+Sep 23, 2013 12:16:56 PM org.apache.catalina.core.ApplicationContext log
+INFO: No Spring WebApplicationInitializer types detected on classpath
