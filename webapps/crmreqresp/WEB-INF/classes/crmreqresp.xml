@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:servlet="http://www.mulesoft.org/schema/mule/servlet" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:core="http://www.mulesoft.org/schema/mule/core" version="EE-3.4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/servlet http://www.mulesoft.org/schema/mule/servlet/current/mule-servlet.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
+    <flow name="crmreqrespFlow1" doc:name="crmreqrespFlow1">
+        <servlet:inbound-endpoint path="service" responseTimeout="10000" doc:name="Servlet"/>
+        <choice doc:name="Choice">
+            <when expression="#[message.payload.contains('Account')]">
+                <custom-transformer class="com.bizgrass.validator.ValidateAccount" doc:name="Account Validation"/>
+                <custom-transformer class="com.bizgrass.transformer.HttpRequestToAccount" doc:name="Account SOAP Call"/>
+            </when>
+            <when expression="#[message.payload.contains('Lead')]">
+                <custom-transformer class="com.bizgrass.validator.ValidateLead" doc:name="Lead Validation"/>
+                <custom-transformer class="com.bizgrass.transformer.HttpRequestToLead" doc:name="Lead SOAP Call"/>
+            </when>
+            <when expression="#[message.payload.contains('Opportunity')]">
+                <custom-transformer class="com.bizgrass.validator.ValidateOpportunity" doc:name="Opportunity Validation"/>
+                <custom-transformer class="com.bizgrass.transformer.HttpRequestToOpportunity" doc:name="Opportunity SOAP Call"/>
+            </when>
+            <when expression="#[message.payload.contains('Campaign')]">
+                <custom-transformer class="com.bizgrass.validator.ValidateCampaign" doc:name="Campaign Validation"/>
+                <custom-transformer class="com.bizgrass.transformer.HttpRequestToCampaign" doc:name="Campaign SOAP Call"/>
+            </when>
+            <when expression="#[message.payload.contains('Contact')]">
+                <custom-transformer class="com.bizgrass.validator.ValidateContact" doc:name="Contact Validation"/>
+                <custom-transformer class="com.bizgrass.transformer.HttpRequestToContact" doc:name="Contact SOAP Call"/>
+            </when>
+            <when expression="#[message.payload.contains('Case')]">
+                <custom-transformer class="com.bizgrass.validator.ValidateCase" doc:name="Case Validation"/>
+                <custom-transformer class="com.bizgrass.transformer.HttpRequestToCase" doc:name="Case SOAP Call"/>
+            </when>
+            <when expression="#[message.payload.contains('Bug')]">
+                <custom-transformer class="com.bizgrass.validator.ValidateBug" doc:name="Bug Validation"/>
+                <custom-transformer class="com.bizgrass.transformer.HttpRequestToBug" doc:name="Bug SOAP Call"/>
+            </when>
+            <when expression="#[message.payload.contains('Task')]">
+                <custom-transformer class="com.bizgrass.validator.ValidateTask" doc:name="Task Validation"/>
+                <custom-transformer class="com.bizgrass.transformer.HttpRequestToTask" doc:name="Task SOAP Call"/>
+            </when>
+            <when expression="#[message.payload.contains('Call')]">
+                <custom-transformer class="com.bizgrass.validator.ValidateCall" doc:name="Call Validation"/>
+                <custom-transformer class="com.bizgrass.transformer.HttpRequestToCall" doc:name="Call SOAP Call"/>
+            </when>
+            <when expression="#[message.payload.contains('Meeting')]">
+                <custom-transformer class="com.bizgrass.validator.ValidateMeeting" doc:name="Meeting Validation"/>
+                <custom-transformer class="com.bizgrass.transformer.HttpRequestToMeeting" doc:name="Meeting SOAP Call"/>
+            </when>
+            <otherwise>
+                <custom-transformer class="com.bizgrass.transformer.HttpRequestToReject" doc:name="ToReject SOAP Call"/>
+            </otherwise>
+        </choice>
+        <echo-component doc:name="Echo"/>
+    </flow>
+    <flow name="crmreqrespFlow2" doc:name="crmreqrespFlow2">
+        <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="8081" doc:name="HTTP"/>
+        <flow-ref name="crmreqrespFlow1" doc:name="Flow Reference"/>
+    </flow>
+</mule>
